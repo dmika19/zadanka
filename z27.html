@@ -1,0 +1,42 @@
+<html>
+<head>
+<script type="text/javascript">
+var ciezarowka = {
+pracownik: 'Michał',
+zawod: 'kierowca',
+cel: 'Francja',
+ciezarowka_wyswietl_musialowska: function ()
+{
+document.write(this.pracownik + ' ' + this.zawod + ' ' + this.cel);
+}
+}
+ciezarowka.ciezarowka_wyswietl_musialowska();
+ciezarowka.wiek=35;
+ciezarowka.wypisz=function() {alert('Wiek: ' + this.wiek + 'lat')}
+ciezarowka.wypisz();
+function SuperObjectClass() {
+this.name = 'Michał';
+this.staz = 10
+}
+//dodaję właściwość i metodę do prototypu
+SuperObjectClass.prototype.weight = 73;
+SuperObjectClass.prototype.showInfo = function () {
+alert(this.name + ' ma ' + this.staz + 'lat stażu.')
+}
+var myObject = new SuperObjectClass();
+myObject.showInfo();
+console.log(myObject.weight); //wypisze sie 73
+</script>
+</head>
+<body>
+<script type="text/javascript">
+function okno_zamknij()
+{
+window.close()
+}
+</script>
+<br>
+programowanie obiektowe<br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+</body>
+</html>
